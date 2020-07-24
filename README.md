@@ -13,8 +13,12 @@ Additionally it's instrumented with OpenTelemetry as well as the Datadog Exporte
 
 # STEPS:
 
-1. Download the folder
-2. Add your api key in docker-compose or in the `.env` file
+1. Download the repository
+2. Add your api key 
+  - in docker-compose.yml directly
+  - or, create a `.env` (`touch .env`) file and add your api key as an environmennt variable
+    - `DD_API_KEY=<YOUR_API_KEY>`
+  - *Note* Please Be sure not to commit your API
 3. Run `docker-compose build` to build the docker image
 4. Run `docker-compose up` to spin up the containers
 5. Open Chrome and hit `http://localhost:4000/api/contacts` or `http://localhost:4000/api/`
