@@ -10,9 +10,11 @@ services:
       - DD_LOGS_ENABLED=true
       - DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true
       - DD_APM_ANALYZED_SPANS=node-app-v2|express.request=1
+      - DD_APM_IGNORE_RESOURCES=PUT /v0.4/traces
     volumes: 
-      - /var/run/docker.sock:/var/run/docker.sock:ro 
-      - /opt/datadog-agent/run:/opt/datadog-agent/run:rw 
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
     ports:
       - "8126:8126"
   app:
