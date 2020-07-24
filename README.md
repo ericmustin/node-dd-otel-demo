@@ -1,5 +1,5 @@
 # Purpose of this Sandbox
-This is sandbox running a Node.js Application with mongoDB. You can use this to troublshoot Node.js APM issues. 
+This is sandbox running a Node.js Application with mongoDB, express, and opentelemetry-exporter-datadog.
 
 # Requirements: 
 Need to have Docker Installed on the machine. 
@@ -9,11 +9,12 @@ Need to have Docker Installed on the machine.
 This is a sample node app with connection to mongoDB to troubleshoot or play around with Node.js APM.
 It uses express.js and routes to create endpoints and MongoDB to store data.
 (Note: The data is wiped everytime to destroy the containers)
+Additionally it's instrumented with OpenTelemetry as well as the Datadog Exporter for sending OpenTelemetry generated Traces to your Datadog Agent (and account)
 
 # STEPS:
 
 1. Download the folder
-2. Add your api key in docker-compose
+2. Add your api key in docker-compose or in the `.env` file
 3. Run `docker-compose build` to build the docker image
 4. Run `docker-compose up` to spin up the containers
 5. Open Chrome and hit `http://localhost:4000/api/contacts` or `http://localhost:4000/api/`
@@ -26,7 +27,7 @@ curl -X POST \
   -H 'cache-control: no-cache' \
   -d 'name=Hetansh&email=sample@gmail.com&phone=12345678&gender=Male&undefined='
  ```
-7. You can see the data by going to `http://localhost:4000/api/contacts` from you chrome browser
+7. You can see the data by going to `http://localhost:4000/api/contacts` from your browser
 8. See traces in your account
 
 
