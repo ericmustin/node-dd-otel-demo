@@ -1,0 +1,21 @@
+{
+  "name": "node-app-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@opentelemetry/node": "^0.9.0",
+    "body-parser": "^1.18.3",
+    "bunyan": "^1.8.12",
+    "dd-trace": "^0.23",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.13",
+    "opentelemetry-exporter-datadog": "^0.1.1",
+    "request": "^2.88.0"
+  }
+}
