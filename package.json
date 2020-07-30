@@ -18,7 +18,7 @@
     "dd-trace": "^0.23",
     "express": "^4.16.4",
     "mongoose": "^5.4.13",
-    "opentelemetry-exporter-datadog": "^0.1.1",
+    "opentelemetry-exporter-datadog": "^0.1.2",
     "request": "^2.88.0"
   }
 }
